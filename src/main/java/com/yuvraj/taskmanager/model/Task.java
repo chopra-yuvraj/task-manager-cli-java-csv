@@ -91,7 +91,6 @@ public final class Task {
         return Objects.hash(id, title, priority, dueDate, done, createdAt, updatedAt);
     }
 
-    // CSV serialization (keep it simple; commas in title are replaced)
     public String toCsv() {
         String safeTitle = title.replace(",", " ");
         String due = (dueDate == null) ? "" : dueDate.toString();
@@ -103,9 +102,7 @@ public final class Task {
         String[] parts = line.split(",", -1);
         if (parts.length < 7) throw new IllegalArgumentException("Corrupt data: " + line);
 
-        // Correct: parse a single cell, not the entire array
         long id = Long.parseLong(parts[0]);
-
         String title = parts[1];
         Priority priority = Priority.valueOf(parts[2]);
         LocalDate due = parts[3].isEmpty() ? null : LocalDate.parse(parts[3]);
