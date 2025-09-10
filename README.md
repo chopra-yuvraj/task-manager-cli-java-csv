@@ -41,8 +41,6 @@ During my B.Tech studies at VIT, I got tired of complex task management apps tha
 git clone https://github.com/chopra-yuvraj/task-manager-cli-java-csv.git
 cd task-manager-cli-java-csv
 
-text
-
 **Step 2: Compile**
 mkdir out
 javac -d out src/main/java/com/yuvraj/taskmanager/.java
@@ -50,14 +48,10 @@ src/main/java/com/yuvraj/taskmanager/model/.java
 src/main/java/com/yuvraj/taskmanager/service/.java
 src/main/java/com/yuvraj/taskmanager/store/.java
 
-text
-
 **Step 3: Your first task**
 java -cp out com.yuvraj.taskmanager.Main help
 java -cp out com.yuvraj.taskmanager.Main add "Learn something new today"
 java -cp out com.yuvraj.taskmanager.Main list
-
-text
 
 **If you see your task listed, you're all set! 🎉**
 
@@ -78,19 +72,13 @@ text
 ### Advanced Usage
 
 **Add task with priority:**
-java -cp out com.yuvraj.taskmanager.Main add "Submit assignment" p:HIGH
-
-text
+java -cp out com.yuvraj.taskmanager.Main add "Submit assignment" p: HIGH
 
 **Add task with due date:**
 java -cp out com.yuvraj.taskmanager.Main add "Dentist appointment" due:2025-10-15
 
-text
-
 **Add task with both:**
-java -cp out com.yuvraj.taskmanager.Main add "Final project" due:2025-12-01 p:HIGH
-
-text
+java -cp out com.yuvraj.taskmanager.Main add "Final project" due:2025-12-01 p: HIGH
 
 ### Priority Levels
 - 🔴 **HIGH** - Urgent, do this first
@@ -104,36 +92,41 @@ text
 Let's plan a typical study day:
 
 Morning setup
-java -cp out com.yuvraj.taskmanager.Main add "Review yesterday's notes" p:MEDIUM
-java -cp out com.yuvraj.taskmanager.Main add "Attend Data Structures lecture" p:HIGH
-java -cp out com.yuvraj.taskmanager.Main add "Complete assignment 3" due:2025-09-15 p:HIGH
+
+java -cp out com.yuvraj.taskmanager.Main add "Review yesterday's notes" p: MEDIUM
+
+java -cp out com.yuvraj.taskmanager.Main add "Attend Data Structures lecture" p: HIGH
+
+java -cp out com.yuvraj.taskmanager.Main add "Complete assignment 3" due:2025-09-15 p: HIGH\n
 
 Check what needs to be done
+
 java -cp out com.yuvraj.taskmanager.Main list
 
-text
-
 **Output:**
+
 #1 [OPEN] Review yesterday's notes | P:MEDIUM | Due:- | Created:2025-09-10
+
 #2 [OPEN] Attend Data Structures lecture | P:HIGH | Due:- | Created:2025-09-10
+
 #3 [OPEN] Complete assignment 3 | P:HIGH | Due:2025-09-15 | Created:2025-09-10
 
-text
-undefined
+
 After attending lecture
+
 java -cp out com.yuvraj.taskmanager.Main done 2
 
 Check progress
+
 java -cp out com.yuvraj.taskmanager.Main list
 
-text
-
 **Updated output:**
-#1 [OPEN] Review yesterday's notes | P:MEDIUM | Due:- | Created:2025-09-10
-#2 [DONE] Attend Data Structures lecture | P:HIGH | Due:- | Created:2025-09-10
-#3 [OPEN] Complete assignment 3 | P:HIGH | Due:2025-09-15 | Created:2025-09-10
 
-text
+#1 [OPEN] Review yesterday's notes | P:MEDIUM | Due:- | Created:2025-09-10
+
+#2 [DONE] Attend Data Structures lecture | P:HIGH | Due:- | Created:2025-09-10
+
+#3 [OPEN] Complete assignment 3 | P:HIGH | Due:2025-09-15 | Created:2025-09-10
 
 ---
 
@@ -141,26 +134,39 @@ text
 
 task-manager-cli-java-csv/
 ├── src/main/java/com/yuvraj/taskmanager/
-│ ├── Main.java # CLI interface & command handling
-│ ├── model/
-│ │ └── Task.java # Task entity (immutable design)
-│ ├── service/
-│ │ └── TaskService.java # Business logic layer
-│ └── store/
-│ └── TaskStore.java # File I/O operations
-├── out/ # Compiled classes go here
-├── LICENSE # MIT License
-├── README.md # You're reading this!
-└── .gitignore # Git ignore rules
 
-text
+│ ├── Main.java # CLI interface & command handling
+
+│ ├── model/
+
+│ │ └── Task.java # Task entity (immutable design)
+
+│ ├── service/
+
+│ │ └── TaskService.java # Business logic layer
+
+│ └── store/
+
+│ └── TaskStore.java # File I/O operations
+
+├── out/ # Compiled classes go here
+
+├── LICENSE # MIT License
+
+├── README.md # You're reading this!
+
+└── .gitignore # Git ignore rules
 
 ### Design Philosophy
 
 **Clean Architecture:** Each layer has a single responsibility  
+
 **Immutable Objects:** Tasks can't be accidentally modified  
+
 **Zero Dependencies:** Pure Java - no external libraries  
+
 **Fail-Safe Storage:** Data is saved immediately after each operation  
+
 
 ---
 
@@ -168,61 +174,76 @@ text
 
 Your tasks are stored locally in CSV format:
 
-**Location:** `~/.task-manager/tasks.csv`
+- **Location:** `~/.task-manager/tasks.csv`
+
 - **Windows:** `C:\Users\YourName\.task-manager\tasks.csv`
+
 - **macOS/Linux:** `/home/username/.task-manager/tasks.csv`
 
 **Why CSV?**
-- ✅ Human readable
+- ✅ Human-readable
 - ✅ Excel/Google Sheets compatible
 - ✅ Easy to backup and share
 - ✅ No database setup required
 
 **Sample CSV content:**
-1,Review notes,MEDIUM,,false,2025-09-10T10:30:00,2025-09-10T10:30:00
-2,Submit assignment,HIGH,2025-09-15,true,2025-09-10T11:00:00,2025-09-10T14:30:00
 
-text
+1, Review notes, MEDIUM, false,2025-09-10T10:30:00,2025-09-10T10:30:00
+
+2, Submit assignment, HIGH,2025-09-15, true,2025-09-10T11:00:00,2025-09-10T14:30:00
 
 ---
 
 ## 🛠️ Pro Tips
 
 ### Create a Shell Alias
+
 Make the CLI even faster to use:
 
 **For Bash/Zsh users:**
+
 Add to your ~/.bashrc or ~/.zshrc
+
 alias task='java -cp /path/to/task-manager-cli-java-csv/out com.yuvraj.taskmanager.Main'
 
 Now you can use:
+
 task add "New task"
+
 task list
+
 task done 1
 
-text
 
 **For Windows users:**
+
 Create a batch file `task.bat` in your PATH:
+
 @echo off
+
 java -cp C:\path\to\task-manager-cli-java-csv\out com.yuvraj.taskmanager.Main %*
 
-text
-
 ### Backup Your Tasks
+
 Create timestamped backup
+
 cp ~/.task-manager/tasks.csv ~/Desktop/tasks-backup-$(date +%Y%m%d).csv
 
+
 Or sync to cloud storage
+
 cp ~/.task-manager/tasks.csv ~/Dropbox/taskmanager-backup/
 
-text
-
 ### Import/Export
+
 Since tasks are stored as CSV, you can:
+
 - Open in Excel for analysis
+
 - Import tasks from other systems
+
 - Share task lists with teammates
+
 - Create reports and visualizations
 
 ---
@@ -232,38 +253,47 @@ Since tasks are stored as CSV, you can:
 ### Common Issues & Solutions
 
 **"javac: command not found"**
+
 Install JDK 17+ and add to PATH
+
 java -version # Should show Java 17 or higher
 
-text
-
 **"Could not find or load main class"**
+
 Make sure you're in the project directory
+
 Recompile everything:
+
 rm -rf out
+
 mkdir out
+
 javac -d out src/main/java/com/yuvraj/taskmanager/.java
+
 src/main/java/com/yuvraj/taskmanager//*.java
 
-text
+
 
 **"Error: Index X out of bounds"**
-Check task ID with list command first
+
+Check the task ID with the list command first
+
 java -cp out com.yuvraj.taskmanager.Main list
 
 Then use the correct ID number
+
 java -cp out com.yuvraj.taskmanager.Main done 1
 
-text
-
 **Tasks not saving**
+
 Check home directory permissions
+
 ls -la ~/.task-manager/
 
-If directory doesn't exist, create it
+If the directory doesn't exist, create it
+
 mkdir -p ~/.task-manager
 
-text
 ## 🎓 Learning Journey
 
 Building this Task Manager CLI taught me valuable lessons:
