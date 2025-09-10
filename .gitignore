@@ -1,0 +1,17 @@
+# Build output
+/out
+/build
+/target
+
+# Java
+*.class
+*.log
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
