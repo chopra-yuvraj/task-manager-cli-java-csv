@@ -8,15 +8,6 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Task Manager CLI by Yuvraj Chopra
- * Commands:
- *   add "Title words..." [due:YYYY-MM-DD] [p:LOW|MEDIUM|HIGH]
- *   list
- *   done <id>
- *   delete <id>
- *   help
- */
 public final class Main {
 
     public static void main(String[] args) {
