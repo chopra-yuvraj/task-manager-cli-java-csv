@@ -11,10 +11,6 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * CSV-backed storage (no external libraries).
- * Data file: ~/.task-manager/tasks.csv
- */
 public final class TaskStore {
     private final Path dataDir;
     private final Path dataFile;
