@@ -4,9 +4,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-/**
- * Task model.
- */
 public final class Task {
     public enum Priority { LOW, MEDIUM, HIGH }
 
@@ -101,7 +98,6 @@ public final class Task {
     public static Task fromCsv(String line) {
         String[] parts = line.split(",", -1);
         if (parts.length < 7) throw new IllegalArgumentException("Corrupt data: " + line);
-
         long id = Long.parseLong(parts[0]);
         String title = parts[1];
         Priority priority = Priority.valueOf(parts[2]);
