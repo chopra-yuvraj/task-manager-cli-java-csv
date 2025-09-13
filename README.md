@@ -1,4 +1,4 @@
-# 🎯 Task Manager CLI
+# Task Manager CLI
 
 *A clean, fast, and simple task manager for busy students and developers*
 
@@ -8,23 +8,20 @@
 
 > **"Sometimes the best tool is the simplest one."**
 
-A lightweight command-line task manager that does exactly what you need without the bloat. Built by a student, for students (and anyone who values simplicity).
+Built by a student, for students (and anyone who values simplicity).
 
 ---
 
-## 🚀 Why Task Manager CLI?
+## Why Task Manager CLI?
 
-During my B.Tech studies at VIT, I got tired of complex task management apps that took longer to set up than actually doing the tasks. This CLI tool is my answer to that frustration - a **no-nonsense, lightning-fast command-line interface** that manages your tasks and gets out of your way.
+While studying technology at VIT, I grew tired of complex task management apps that took longer to set up than actually completing the tasks. This CLI tool is my answer to that frustration - a **no-nonsense, lightning-fast command-line interface** that manages your tasks and gets out of your way.
 
-### ✨ Key Features
-
-🎯 **Four Simple Commands** - Add, List, Complete, Delete. That's it.  
-⚡ **Blazing Fast** - From thought to task in under 2 seconds  
-📁 **Local Storage** - Your data stays yours (CSV format)  
-🔒 **Zero Dependencies** - Pure Java, no external libraries  
-🎨 **Smart Prioritization** - HIGH, MEDIUM, LOW priority levels  
-📅 **Due Date Tracking** - Never miss deadlines again  
-💻 **Cross Platform** - Works on Windows, macOS, and Linux  
+### Key Features
+**Four Simple Commands** - Add, List, Complete, Delete. That's it.  
+**Local Storage** - Your data stays yours (CSV format)  
+**Smart Prioritisation** - HIGH, MEDIUM, LOW priority levels  
+**Due Date Tracking** - Never miss deadlines again  
+**Cross Platform** - Works on Windows, macOS, and Linux  
 
 ---
 
