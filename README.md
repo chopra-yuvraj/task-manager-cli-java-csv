@@ -81,19 +81,18 @@ Special thanks to:
 Currently exploring the intersection of software engineering and data science.*
 
 
-**Connect with me:**
-- GitHub: [@chopra-yuvraj](https://github.com/chopra-yuvraj)
-- LinkedIn: [Connect with me](https://www.linkedin.com/in/chopra-yuvraj)
-- Email: yuvrajchopra19@gmail.com
+### Connect With Me
+
+[![GitHub](https://img.shields.io/badge/GitHub-chopra--yuvraj-181717?style=for-the-badge&logo=github)](https://github.com/chopra-yuvraj)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-chopra--yuvraj-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/chopra-yuvraj)
+[![Email](https://img.shields.io/badge/Email-yuvrajchopra19%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yuvrajchopra19@gmail.com)
 
 ---
 
 <div align="center">
 
-### ⭐ Star this repository if Task Manager CLI helped you stay organised!
-
 **Made with ❤️ and ☕ by Yuvraj Chopra**
 
-[🔗 **View on GitHub**](https://github.com/chopra-yuvraj/task-manager-cli-java-csv)
+[**View on GitHub**](https://github.com/chopra-yuvraj/task-manager-cli-java-csv)
 
 </div>
